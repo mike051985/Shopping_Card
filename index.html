@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwan Fruits Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <a href="index.html" class="navbar-brand">Delicious Fruits</a>
+                <button type="button" class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="navbar-collapse">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shopping</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="cart">
+                    <button type="button" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count-info">0</span>
+                    </button>
+                    <div class="cart-container">
+                        <div class="cart-list">
+                            <!-- Single Item -->
+                            <div class="cart-item">
+                                <img src="https://i.postimg.cc/kgdwN0dQ/Screenshot-2022-07-28-144626.png" alt="product image">
+                                <div class="cart-item-info"></div>
+                                <h3 class="cart-item-name">Grappes</h3>
+                                <span class="cart-item-price">NTD50.00/Kg</span>
+                            </div>
+                            <button class="cart-item-del-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <!-- End of Single Item -->
+                            <div class="cart-total">
+                                <h3>Total: NTD</h3>
+                                <span id="cart-total-value">NTD50.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- End of Navbar -->
+        </div>
+    </header>
+</body>
+</html>
