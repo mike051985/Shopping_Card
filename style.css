@@ -267,6 +267,37 @@ header .container{
     font-weight: 500;
 }
 
+
+@media screen and (min-width: 680px){
+    .navbar{
+        padding: 1.5rem 6rem!important;
+    }
+    .cart-container{
+        width: 480px;
+        left: auto;
+        right: 3rem;
+    }
+}
+
+@media screen and(min-width: 992px){
+    .navbar{
+        padding: 1.5rem 6rem!important;
+    }
+    .cart-container{
+        right: 6rem;
+    }
+}
+
+@media screen and(min-width: 1200px){
+    .navbar{
+        padding: 1.5rem 14rem!important;
+    }
+    .cart-container{
+        right: 14rem;
+    }
+}
+
+
 /* Banner */
 .banner{
     flex: 1;
@@ -282,6 +313,25 @@ header .container{
     font-weight: 500;
     font-size: 1.15rem;
     opacity: 0.45;
+}
+
+@media screen and (min-width: 992px){
+    .banner{
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        align-content: center;
+        gap: 1rem;
+    }
+    .banner-content{
+        text-align: center;
+    }
+}
+
+@media screen and(min-width: 1200px){
+    .banner-content h1{
+        font-size: 3.5rem;
+    }
 }
 
 .btns{
@@ -321,6 +371,16 @@ header .container{
     background: var(--fire-bush);
     color: #ffffff;
 }
+
+@media screen and (min-width: 480px){
+    .btns button{
+        display: inline-block;
+    }
+    .btns button:first-child{
+        margin-right: 0.4rem;
+    }
+}
+
 
 /* Products */
 .products{
@@ -415,65 +475,80 @@ header .container{
     opacity: 0.6;
 }
 
-/* Media Queries*/
-    /* Header */
-@media screen and (min-width: 480px){
-    .btns button{
-        display: inline-block;
-    }
-    .btns button:first-child{
-        margin-right: 0.4rem;
-    }
-}
-
 @media screen and (min-width: 680px){
-    .navbar{
-        padding: 1.5rem 6rem!important;
-    }
-    .cart-container{
-        width: 480px;
-        left: auto;
-        right: 3rem;
-    }
     .product-list{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
+        
     }
 }
 
-@media screen and(min-width: 992px){
-    .navbar{
-        padding: 1.5rem 6rem!important;
-    }
-    .cart-container{
-        right: 6rem;
-    }
-    .banner{
-        padding-top: 0;
-        display: grid;
-        grid-template-columns: 55% 45%;
-        align-content: center;
-    }
-    .banner-content{
-        text-align: left;
-    }
+@media screen and (min-width: 992px){
     .product-list{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and(min-width: 1200px){
-    .navbar{
-        padding: 1.5rem 14rem!important;
-    }
-    .cart-container{
-        right: 14rem;
-    }
-    .banner-content h1{
-        font-size: 3.5rem;
-    }
+@media screen and (min-width: 1200px){
     .product-list{
         grid-template-columns: repeat(4, 1fr);
-    }
+    }     
+}
+
+/* Footer */
+footer{
+    background-color: var(--baltic-sea);
+}
+
+.footer-banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.postimg.cc/hPhpfvZQ/pexels-quang-nguyen-vinh-2135677-2.jpg) center/cover no-repeat;
+    padding: 3rem 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer-banner h2{
+    font-size: 2.4rem;
+}
+
+.footer-banner .btn{
+    margin-top: 2rem;
+}
+
+.footer-banner .btn:hover{
+    background: #ffffff;
+    color: var(--fire-bush);
+    background: transparent;
+}
+
+footer > .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons{
+    display: flex;
+    padding: 3rem 0;
+}
+
+.social-icons a{
+    color: #ffffff;
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.25rem;
+    transition: var(--trans);
+    -webkit-transition: var(--trans);
+    -moz-transition: var(--trans);
+    -ms-transition: var(--trans);
+    -o-transition: var(--trans);
+}
+
+.social-icons a:hover{
+    color: var(--fire-bush);
 }
