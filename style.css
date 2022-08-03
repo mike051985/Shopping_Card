@@ -469,6 +469,11 @@ header .container{
     background-color: #23272a;
 }
 
+.product-name{
+    font-size: 1.3rem;
+    color: var(--baltic-sea);
+}
+
 .product-price{
     font-size: 1.15rem;
     font-weight: 500;

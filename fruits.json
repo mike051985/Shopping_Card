@@ -1,0 +1,74 @@
+[
+    {
+        "name" : "Mango",
+        "price" : "NTD50.00/KG",
+        "imgSrc" : "https://i.postimg.cc/zf4NWGxy/season-cover-mango.jpg"
+
+    },
+    {
+        "name" : "Avocado",
+        "price" : "NTD60.00/KG",
+        "imgSrc" : "https://i.postimg.cc/sfc8C255/season-cover-avocado.jpg"
+
+    },
+    {
+        "name" : "Pineapple",
+        "price" : "NTD25.00/KG",
+        "imgSrc" : "https://i.postimg.cc/VsD7HVcR/season-cover-pineapple.jpg"
+
+    },
+    {
+        "name" : "Custard Apple",
+        "price" : "NTD50.00/KG",
+        "imgSrc" : "https://i.postimg.cc/Y2s6FKHJ/season-cover-custardapple.jpg"
+
+    },
+    {
+        "name" : "Watermelon",
+        "price" : "NTD35.00/KG",
+        "imgSrc" : "https://i.postimg.cc/cJLMpQGn/season-cover-watermelon.jpg"
+
+    },
+    {
+        "name" : "Dragon Fruit",
+        "price" : "NTD20.00/KG",
+        "imgSrc" : "https://i.postimg.cc/m2cxsHRK/season-cover-dragonfruit.jpg"
+
+    },
+    {
+        "name" : "Tangerine",
+        "price" : "NTD30.00/KG",
+        "imgSrc" : "https://i.postimg.cc/GmC1xpwN/season-cover-tangerine.jpg"
+
+    },
+    {
+        "name" : "Pear",
+        "price" : "NTD45.00/KG",
+        "imgSrc" : "https://i.postimg.cc/SsNS7x8q/season-cover-pear.jpg"
+
+    },
+    {
+        "name" : "Strawberry",
+        "price" : "NTD70.00/KG",
+        "imgSrc" : "https://i.postimg.cc/wjRYzs57/season-cover-strawberry.jpg"
+
+    },
+    {
+        "name" : "Pomelo",
+        "price" : "NTD40.00/KG",
+        "imgSrc" : "https://i.postimg.cc/yx6WpTZJ/season-cover-pomelo.jpg"
+
+    },
+    {
+        "name" : "Peach",
+        "price" : "NTD75.00/KG",
+        "imgSrc" : "https://i.postimg.cc/Z5Lb2NJp/season-cover-peach.jpg"
+
+    },
+    {
+        "name" : "Orange",
+        "price" : "NTD25.00/KG",
+        "imgSrc" : "https://i.postimg.cc/XYn3fv9J/season-cover-orange.jpg"
+
+    }
+]
