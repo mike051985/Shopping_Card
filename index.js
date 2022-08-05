@@ -42,7 +42,7 @@ function loadJSON(){
                     <div class="product-img">
                         <img src="${product.imgSrc}" alt="mango">
                         <button class="add-to-cart-btn">
-                        <i class="fas fa-shopping-cart">Add To Cart</i>
+                        <i class="fas fa-shopping-cart"></i>Add To Cart
                         </button>
                     </div>
                     <div class="product-content">
@@ -62,7 +62,54 @@ function loadJSON(){
 
 // Purchase Product
 function purchaseProduct(e){
-    if (e.target.classList.contains('add-to-cart-btn')) {
-        console.log(e.target);
+    if(e.target.classList.contains('add-to-cart-btn')){
+        let product = e.target.parentElement.parentElement;
+        getProductInfo(product);
     }
+}
+
+// Get Product info after add to cart 
+function getProductInfo(product){
+    let productInfo = {
+        id: cartItemID,
+        imgSrc: product.querySelector('.product-img img').src,
+        name: product.querySelector('.product-name').textContent,
+        price: product.querySelector('.product-price').textContent
+    }
+    cartItemID++;
+    addToCartList(productInfo);
+    saveProductInStorage(productInfo);
+}
+
+// Add the selected product to the cart list
+function addToCartList(product){
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.setAttribute('data-id', `${product.id}`);
+    cartItem.innerHTML = `
+    <div class="cart-item">
+        <img src="${product.imgSrc}" alt="product image">
+            <div class="cart-item-info">
+            <h3 class="cart-item-name">${product.name}</h3>
+            <span class="cart-item-price">${product.price}</span>
+        </div>
+    </div>
+    <button class="cart-item-del-btn">
+        <i class="fas fa-times"></i>
+    </button>
+    `;
+    cartList.appendChild(cartItem);
+}
+
+// Save the product in the local storage
+function saveProductInStorage(item){
+    let products = getProductFromStorage();
+    products.push(item);
+    localStorage.setItem('products', JSON.stringify(products));
+}
+
+// Get all the products info if there is any in the local storage
+function getProductFromStorage(){
+    return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
+    // Return empty array if there isn't any product info
 }
