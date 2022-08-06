@@ -510,20 +510,20 @@ footer{
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.postimg.cc/hPhpfvZQ/pexels-quang-nguyen-vinh-2135677-2.jpg) center/cover no-repeat;
     padding: 3rem 0;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
 }
-
+/*
 .footer-banner .text{
     width: 60%;
-}
+}*/
 
 .footer-banner h2{
     font-size: 2.4rem;
 }
 
-.footer-banner .btn{
+/*.footer-banner .btn{
     margin-left: 0;
-}
+}*/
 
 .footer-banner .btn:hover{
     background: #ffffff;

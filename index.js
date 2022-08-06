@@ -28,6 +28,8 @@ function eventListeners(){
     });
 
     productList.addEventListener('click', purchaseProduct);
+
+    cartList.addEventListener('click', deleteProduct);
 };
 
 // Update cart info
@@ -69,7 +71,7 @@ function loadJSON(){
 }
 
 
-// Purchase Product
+// Purchase Product from product list
 function purchaseProduct(e){
     if(e.target.classList.contains('add-to-cart-btn')){
         let product = e.target.parentElement.parentElement;
@@ -115,8 +117,8 @@ function saveProductInStorage(item){
     let products = getProductFromStorage();
     products.push(item);
     localStorage.setItem('products', JSON.stringify(products));
+    updateCartInfo();
 }
-
 // Get all the products info if there is any in the local storage
 function getProductFromStorage(){
     return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
@@ -133,6 +135,9 @@ function loadCart(){
         cartItemID++; // else get the id of the last product and increment it 
     }
     products.forEach(product => addToCartList(product));
+
+    // calculate and update UI of cart info
+    updateCartInfo();
 }
 
 // calculate total price of the cart and other info
@@ -148,4 +153,23 @@ function findCartInfo(){
         total: total.toFixed(2),
         productCount: products.length
     }
+}
+
+// Delete product from cart list and local storage
+function deleteProduct(e){
+    let cartItem;
+    if(e.target.tagName === 'BUTTON'){
+        cartItem = e.target.parentElement;
+        cartItem.remove(); // this remove from the DOM only
+    } else if(e.target.tagName === 'I'){
+        cartItem = e.target.parentElement.parentElement;
+        cartItem.remove(); // this remove from the DOM only
+    } 
+    
+    let products = getProductFromStorage();
+    let updatedProducts = products.filter(product => {
+        return product.id !== parseInt(cartItem.dataset.id);
+    });
+    localStorage.setItem('products', JSON.stringify(updatedProducts));
+    updateCartInfo();
 }
