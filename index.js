@@ -13,6 +13,7 @@ eventListeners();
 function eventListeners(){
     window.addEventListener('DOMContentLoaded', () => {
         loadJSON();
+        loadCart();
     })
     // Toggle navbar when toggle button is clicked
     document.querySelector('.navbar-toggler').
@@ -29,6 +30,14 @@ function eventListeners(){
     productList.addEventListener('click', purchaseProduct);
 };
 
+// Update cart info
+function updateCartInfo(){
+    let cartInfo = findCartInfo();
+    cartCountInfo.textContent = cartInfo.productCount;
+    cartTotalValue.textContent = cartInfo.total;
+}
+
+updateCartInfo();
 
 // Load product items content from JSON file
 function loadJSON(){
@@ -112,4 +121,31 @@ function saveProductInStorage(item){
 function getProductFromStorage(){
     return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
     // Return empty array if there isn't any product info
+}
+
+// Load carts product
+function loadCart(){
+    let products = getProductFromStorage();
+    if(products.length < 1){
+        cartItemID = 1; // if there is no product in the local storage
+    } else {
+        cartItemID = products[products.length - 1].id;
+        cartItemID++; // else get the id of the last product and increment it 
+    }
+    products.forEach(product => addToCartList(product));
+}
+
+// calculate total price of the cart and other info
+function findCartInfo(){
+    let products = getProductFromStorage();
+    let total = products.reduce((acc, product) => {
+        let price = parseFloat(product.price.substr(1));
+
+        return acc += price;
+    }, 0);
+
+    return{
+        total: total.toFixed(2),
+        productCount: products.length
+    }
 }
