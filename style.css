@@ -121,7 +121,8 @@ header .container{
 
 /*JS related class */
 .show-navbar{
-    height: 204px;
+    height: 120px;
+    background-color: var(--fire-bush);
 }
 
 
@@ -277,6 +278,7 @@ header .container{
         left: auto;
         right: 3rem;
     }
+    
 }
 
 @media screen and(min-width: 992px){
@@ -338,7 +340,7 @@ header .container{
     margin: 1.5rem 0;
 }
 
-.btn{
+.btns a{
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -357,20 +359,11 @@ header .container{
     -o-transition: var(--trans);
 }
 
-.btns .btn:last-child{
-    color: var(--fire-bush);
-    background: transparent;
-}
-
-.btns .btn:first-child:hover{
+.btns a:hover{
     background: transparent;
     color: var(--fire-bush);
 }
 
-.btns .btn:last-child:hover{
-    background: var(--fire-bush);
-    color: #ffffff;
-}
 
 @media screen and (min-width: 480px){
     .btns button{
@@ -519,6 +512,11 @@ footer{
 
 .footer-banner h2{
     font-size: 2.4rem;
+}
+
+.envelope{
+    font-size: 4rem;
+    color: #ffffff;
 }
 
 /*.footer-banner .btn{
