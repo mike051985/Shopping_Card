@@ -208,8 +208,8 @@ header .container{
 
 .cart-item{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3rem;
     align-items: center;
     position: relative;
     padding: 1.2rem 0.6rem;
@@ -220,6 +220,19 @@ header .container{
 /*.cart-item:last-child{
     border-bottom: none;
 }*/
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--fire-bush);
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
 
 .cart-item-del-btn{
     position: absolute;
@@ -240,10 +253,16 @@ header .container{
 .cart-item img{
     width: 80px;
 }
-
+/*
 .cart-item-info{
-    text-align: center;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-left: 1rem;
+    
+}*/
+
 
 .cart-item-info span{
     display: block;
@@ -340,7 +359,8 @@ header .container{
     margin: 1.5rem 0;
 }
 
-.btns a{
+.btns a,
+.btn-purchase{
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;

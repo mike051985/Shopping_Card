@@ -100,10 +100,12 @@ function addToCartList(product){
     cartItem.innerHTML = `
     <div class="cart-item">
         <img src="${product.imgSrc}" alt="product image">
-            <div class="cart-item-info">
+        <div class="cart-item-info">
             <h3 class="cart-item-name">${product.name}</h3>
             <span class="cart-item-price">${product.price}</span>
         </div>
+        <input class="cart-quantity-input" type="number" value="1">
+        <span class="cart-item-total" id="cart-item-total">$</span>
     </div>
     <button class="cart-item-del-btn">
         <i class="fas fa-times"></i>
