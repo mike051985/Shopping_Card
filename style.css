@@ -208,7 +208,7 @@ header .container{
 
 .cart-item{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 3rem;
     align-items: center;
     position: relative;
@@ -217,10 +217,15 @@ header .container{
     /*border-bottom: 1px solid rgba(0, 0, 0, 0.21);*/
 }
 
+.buttons{
+    display: flex;
+    
+}
+
 /*.cart-item:last-child{
     border-bottom: none;
 }*/
-
+/*
 .cart-quantity-input {
     height: 34px;
     width: 50px;
@@ -232,7 +237,7 @@ header .container{
     text-align: center;
     font-size: 1.2em;
     margin-right: 25px;
-}
+}*/
 
 .cart-item-del-btn{
     position: absolute;

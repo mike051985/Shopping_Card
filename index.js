@@ -104,8 +104,14 @@ function addToCartList(product){
             <h3 class="cart-item-name">${product.name}</h3>
             <span class="cart-item-price">${product.price}</span>
         </div>
+        <div class="buttons">
+            <i class="bi bi-dash-lg"></i>
+            <div class="quantity">0</div>
+            <i class="bi bi-plus-lg"></i>
+        </div>
+        <!--
         <input class="cart-quantity-input" type="number" value="1">
-        <span class="cart-item-total" id="cart-item-total">$</span>
+        <span class="cart-item-total" id="cart-item-total">$</span>-->
     </div>
     <button class="cart-item-del-btn">
         <i class="fas fa-times"></i>
