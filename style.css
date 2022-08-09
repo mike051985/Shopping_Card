@@ -208,7 +208,7 @@ header .container{
 
 .cart-item{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 80px 150px auto 200px;
     column-gap: 3rem;
     align-items: center;
     position: relative;
@@ -217,9 +217,29 @@ header .container{
     /*border-bottom: 1px solid rgba(0, 0, 0, 0.21);*/
 }
 
+.cart-item img{
+    width: 80px;
+}
+
+.cart-item-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+.cart-item-info span{
+    display: block;
+}
+
 .buttons{
     display: flex;
-    
+    flex-direction: row;
+    gap: 8px;
+    font-size: 1.25rem;
+}
+
+.cart-item-price{
+    font-size: 1.25rem;
 }
 
 /*.cart-item:last-child{
@@ -253,24 +273,6 @@ header .container{
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-}
-
-.cart-item img{
-    width: 80px;
-}
-/*
-.cart-item-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    margin-left: 1rem;
-    
-}*/
-
-
-.cart-item-info span{
-    display: block;
 }
 
 .cart-total{
@@ -365,7 +367,7 @@ header .container{
 }
 
 .btns a,
-.btn-purchase{
+.btn-cart{
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
