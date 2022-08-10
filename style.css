@@ -208,8 +208,8 @@ header .container{
 
 .cart-item{
     display: grid;
-    grid-template-columns: 80px 150px auto 200px;
-    column-gap: 3rem;
+    grid-template-columns: 70px 150px auto 100px 50px;
+    column-gap: 2rem;
     align-items: center;
     position: relative;
     padding: 1.2rem 0.6rem;
@@ -224,7 +224,7 @@ header .container{
 .cart-item-info{
     display: flex;
     flex-direction: row;
-    gap: 20px; 
+    gap: 10px; 
 }
 
 .cart-item-info span{

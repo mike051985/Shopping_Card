@@ -105,10 +105,11 @@ function addToCartList(product){
             <span class="cart-item-price">${product.price}</span>
         </div>
         <div class="buttons">
-            <i class="bi bi-dash-lg"></i>
-            <span class="quantity">0</span>
-            <i class="bi bi-plus-lg"></i>
+            <i  class="bi bi-dash-lg"></i>
+            <div  class="quantity">0</div>
+            <i  class="bi bi-plus-lg"></i>
         </div>
+        <div id="total-item" class="total-item">$0</div>
     </div>
     <button class="cart-item-del-btn">
         <i class="fas fa-times"></i>
@@ -116,6 +117,8 @@ function addToCartList(product){
     `;
     cartList.appendChild(cartItem);
 }
+
+
 
 // Save the product in the local storage
 function saveProductInStorage(item){
