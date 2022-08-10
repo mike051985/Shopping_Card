@@ -208,7 +208,7 @@ header .container{
 
 .cart-item{
     display: grid;
-    grid-template-columns: 70px 150px auto 100px 50px;
+    grid-template-columns: 70px 150px auto 70px 30px;
     column-gap: 2rem;
     align-items: center;
     position: relative;
@@ -231,10 +231,10 @@ header .container{
     display: block;
 }
 
-.buttons{
+.quantity{
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 1px;
     font-size: 1.25rem;
 }
 
@@ -245,19 +245,21 @@ header .container{
 /*.cart-item:last-child{
     border-bottom: none;
 }*/
-/*
-.cart-quantity-input {
-    height: 34px;
-    width: 50px;
+
+.quantity input{
+    height: 30px;
+    width: 35px;
     border-radius: 5px;
-    border: 1px solid var(--fire-bush);
-    background-color: #eee;
     color: #333;
     padding: 0;
     text-align: center;
-    font-size: 1.2em;
-    margin-right: 25px;
-}*/
+    font-size: 1rem;
+    
+}
+
+.total-item{
+    font-size: 1.25rem;
+}
 
 .cart-item-del-btn{
     position: absolute;

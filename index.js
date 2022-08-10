@@ -13,7 +13,7 @@ eventListeners();
 function eventListeners(){
     window.addEventListener('DOMContentLoaded', () => {
         loadJSON();
-        loadCart();
+        //loadCart();
     })
     // Toggle navbar when toggle button is clicked
     document.querySelector('.navbar-toggler').
@@ -27,19 +27,19 @@ function eventListeners(){
     cartContainer.classList.toggle('show-cart-container');
     });
 
-    productList.addEventListener('click', purchaseProduct);
+  //  productList.addEventListener('click', purchaseProduct);
 
-    cartList.addEventListener('click', deleteProduct);
+    //cartList.addEventListener('click', deleteProduct);
 };
-
+/*
 // Update cart info
 function updateCartInfo(){
     let cartInfo = findCartInfo();
     cartCountInfo.textContent = cartInfo.productCount;
     cartTotalValue.textContent = cartInfo.total;
-}
+}*/
 
-updateCartInfo();
+//updateCartInfo();
 
 // Load product items content from JSON file
 function loadJSON(){
@@ -70,15 +70,15 @@ function loadJSON(){
     })
 }
 
-
+/*
 // Purchase Product from product list
 function purchaseProduct(e){
     if(e.target.classList.contains('add-to-cart-btn')){
         let product = e.target.parentElement.parentElement;
         getProductInfo(product);
     }
-}
-
+}*/
+/*
 // Get Product info after add to cart 
 function getProductInfo(product){
     let productInfo = {
@@ -90,8 +90,8 @@ function getProductInfo(product){
     cartItemID++;
     addToCartList(productInfo);
     saveProductInStorage(productInfo);
-}
-
+}*/
+/*
 // Add the selected product to the cart list
 function addToCartList(product){
     const cartItem = document.createElement('div');
@@ -104,11 +104,16 @@ function addToCartList(product){
             <h3 class="cart-item-name">${product.name}</h3>
             <span class="cart-item-price">${product.price}</span>
         </div>
-        <div class="buttons">
-            <i  class="bi bi-dash-lg"></i>
-            <div  class="quantity">0</div>
-            <i  class="bi bi-plus-lg"></i>
+        <div class="quantity">
+        <input class="number" type="button" onclick="decrementValue()" value="-" />
+        <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+        <input class="number" type="button" onclick="incrementValue()" value="+" />
         </div>
+        <!-- <div class="buttons">
+            <i class="bi bi-dash-lg"></i>
+            <div  class="quantity">0</div>
+            <i class="bi bi-plus-lg"></i>
+        </div> -->
         <div id="total-item" class="total-item">$0</div>
     </div>
     <button class="cart-item-del-btn">
@@ -116,23 +121,43 @@ function addToCartList(product){
     </button>
     `;
     cartList.appendChild(cartItem);
+}*/
+/*
+// Increment/Decrement quantity
+function incrementValue(){
+    let value = parseInt(document.getElementById("number").value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value < 10){
+        value++;
+        document.getElementById("number").value = value;
+    }
 }
 
+function decrementValue(){
+    let value = parseInt(document.getElementById("number").value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value > 1){
+        value--;
+        document.getElementById("number").value = value;
+    }
+}*/
 
 
-// Save the product in the local storage
+/*// Save the product in the local storage
 function saveProductInStorage(item){
     let products = getProductFromStorage();
     products.push(item);
     localStorage.setItem('products', JSON.stringify(products));
     updateCartInfo();
-}
+}*/
+/*
 // Get all the products info if there is any in the local storage
 function getProductFromStorage(){
     return localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) : [];
     // Return empty array if there isn't any product info
 }
-
+*/
+/*
 // Load carts product
 function loadCart(){
     let products = getProductFromStorage();
@@ -146,8 +171,8 @@ function loadCart(){
 
     // calculate and update UI of cart info
     updateCartInfo();
-}
-
+}*/
+/*
 // calculate total price of the cart and other info
 function findCartInfo(){
     let products = getProductFromStorage();
@@ -162,7 +187,8 @@ function findCartInfo(){
         productCount: products.length
     }
 }
-
+*/
+/*
 // Delete product from cart list and local storage
 function deleteProduct(e){
     let cartItem;
@@ -180,4 +206,4 @@ function deleteProduct(e){
     });
     localStorage.setItem('products', JSON.stringify(updatedProducts));
     updateCartInfo();
-}
+}*/
