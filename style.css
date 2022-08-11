@@ -208,7 +208,7 @@ header .container{
 
 .cart-item{
     display: grid;
-    grid-template-columns: 70px 150px auto 70px 30px;
+    grid-template-columns: 80px 150px auto 70px;
     column-gap: 2rem;
     align-items: center;
     position: relative;
@@ -221,10 +221,9 @@ header .container{
     width: 80px;
 }
 
-.cart-item-info{
-    display: flex;
-    flex-direction: row;
-    gap: 10px; 
+.cart-item-info span{
+    font-size: 0.8rem;
+    text-transform: uppercase;
 }
 
 .cart-item-info span{
@@ -233,9 +232,13 @@ header .container{
 
 .quantity{
     display: flex;
-    flex-direction: row;
-    gap: 1px;
-    font-size: 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity i{
+    color: var(--fire-bush);
 }
 
 .cart-item-price{
