@@ -1,74 +1,102 @@
-[
-    {
-        "name" : "Mango",
-        "price" : "$5.00",
-        "imgSrc" : "https://i.postimg.cc/zf4NWGxy/season-cover-mango.jpg"
 
-    },
-    {
-        "name" : "Avocado",
-        "price" : "$6.00",
-        "imgSrc" : "https://i.postimg.cc/sfc8C255/season-cover-avocado.jpg"
+{
+    "items": [
+        {
+        "sys": { "id": "1" },
+        "fields": {
+            "title": "Mango",
+            "price": 5.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/zf4NWGxy/season-cover-mango.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "2" },
+        "fields": {
+            "title": "Avocado",
+            "price": 6.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/sfc8C255/season-cover-avocado.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "3" },
+        "fields": {
+            "title": "Pineapple",
+            "price": 2.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/VsD7HVcR/season-cover-pineapple.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "4" },
+        "fields": {
+            "title": "Custard Apple",
+            "price": 5.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/Y2s6FKHJ/season-cover-custardapple.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "5" },
+        "fields": {
+            "title": "Watermelon",
+            "price": 8.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/cJLMpQGn/season-cover-watermelon.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "6" },
+        "fields": {
+            "title": "Dragon Fruit",
+            "price": 9.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/m2cxsHRK/season-cover-dragonfruit.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "7" },
+        "fields": {
+            "title": "Tangerine",
+            "price": 2.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/GmC1xpwN/season-cover-tangerine.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "8" },
+        "fields": {
+            "title": "Pear",
+            "price": 4.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/SsNS7x8q/season-cover-pear.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "9" },
+        "fields": {
+            "title": "Strawberry",
+            "price": 7.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/wjRYzs57/season-cover-strawberry.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "10" },
+        "fields": {
+            "title": "Pomelo",
+            "price": 6.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/yx6WpTZJ/season-cover-pomelo.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "11" },
+        "fields": {
+            "title": "Peach",
+            "price": 7.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/Z5Lb2NJp/season-cover-peach.jpg" } } }
+        }
+        },
+        {
+        "sys": { "id": "12" },
+        "fields": {
+            "title": "Orange",
+            "price": 2.99,
+            "image": { "fields": { "file": { "url": "https://i.postimg.cc/XYn3fv9J/season-cover-orange.jpg" } } }
+        }
+        }
+    ]
+}
 
-    },
-    {
-        "name" : "Pineapple",
-        "price" : "$2.50",
-        "imgSrc" : "https://i.postimg.cc/VsD7HVcR/season-cover-pineapple.jpg"
-
-    },
-    {
-        "name" : "Custard Apple",
-        "price" : "$5.00",
-        "imgSrc" : "https://i.postimg.cc/Y2s6FKHJ/season-cover-custardapple.jpg"
-
-    },
-    {
-        "name" : "Watermelon",
-        "price" : "$3.50",
-        "imgSrc" : "https://i.postimg.cc/cJLMpQGn/season-cover-watermelon.jpg"
-
-    },
-    {
-        "name" : "Dragon Fruit",
-        "price" : "$10.00",
-        "imgSrc" : "https://i.postimg.cc/m2cxsHRK/season-cover-dragonfruit.jpg"
-
-    },
-    {
-        "name" : "Tangerine",
-        "price" : "$3.00",
-        "imgSrc" : "https://i.postimg.cc/GmC1xpwN/season-cover-tangerine.jpg"
-
-    },
-    {
-        "name" : "Pear",
-        "price" : "$4.50",
-        "imgSrc" : "https://i.postimg.cc/SsNS7x8q/season-cover-pear.jpg"
-
-    },
-    {
-        "name" : "Strawberry",
-        "price" : "$7.00",
-        "imgSrc" : "https://i.postimg.cc/wjRYzs57/season-cover-strawberry.jpg"
-
-    },
-    {
-        "name" : "Pomelo",
-        "price" : "$10.00",
-        "imgSrc" : "https://i.postimg.cc/yx6WpTZJ/season-cover-pomelo.jpg"
-
-    },
-    {
-        "name" : "Peach",
-        "price" : "$7.50",
-        "imgSrc" : "https://i.postimg.cc/Z5Lb2NJp/season-cover-peach.jpg"
-
-    },
-    {
-        "name" : "Orange",
-        "price" : "$2.50",
-        "imgSrc" : "https://i.postimg.cc/XYn3fv9J/season-cover-orange.jpg"
-
-    }
-]
