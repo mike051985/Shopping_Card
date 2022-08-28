@@ -281,13 +281,16 @@ body {
 }
 .footer-banner h2{
     font-size: 2.4rem;
+    padding-bottom: 1rem;
 }
 .footer-banner p{
     font-size: 1.25rem;
+    padding-bottom: 1rem;
 }
 .envelope{
     font-size: 3rem;
     color: var(--mainGrey);
+    padding-bottom: 1.5rem;
 }
 .envelope:hover{
     color: #626a6a;
