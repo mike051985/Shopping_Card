@@ -38,11 +38,14 @@ body {
     justify-content: space-between;
     padding: 0 1.5rem;
 }
-.navbar-center h3{
+.navbar-center h3 {
     text-transform: uppercase;
 }
 .nav-icon {
     font-size: 1.5rem;
+}
+.nav-icon a {
+    color: var(--primaryColor);
 }
 .cart-btn {
     position: relative;
@@ -88,11 +91,32 @@ body {
     border: 1px solid var(--primaryColor);
     transition: var(--mainTransition);
     cursor: pointer;
+    text-decoration: none;
 }
+
 .banner-btn:hover {
     background: transparent;
     color: var(--primaryColor);
 }
+
+.checkout-btn {
+    padding: 1rem 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+.checkout-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+}
+
 /* --------------- End of Hero ----------------*/ 
 
 /* --------------- Cart ----------------*/ 
@@ -268,44 +292,44 @@ body {
 /* ---------------end of Products ---------------- */
 
 /*-----------footer------------*/
-.footer{
+.footer {
     background-color: #33383c;
 }
-.footer-banner{
+.footer-banner { 
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.postimg.cc/43LhFPGR/pexels-quang-nguyen-vinh-2135677-2.jpg) center/cover no-repeat;
     padding: 3rem 0;
 }
-.footer-banner{
+.footer-banner {
     color: #fff;
     text-align: center;
 }
-.footer-banner h2{
+.footer-banner h2 {
     font-size: 2.4rem;
     padding-bottom: 1rem;
 }
-.footer-banner p{
+.footer-banner p {
     font-size: 1.3rem;
     font-weight: 400;
     padding-bottom: 1rem;
 }
-.envelope{
+.envelope {
     font-size: 3rem;
     color: var(--mainGrey);
     padding-bottom: 1.5rem;
 }
-.envelope:hover{
+.envelope:hover {
     color: #626a6a;
 }
-footer > .container{
+footer > .footer-info {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.social-icons{
+.social-icons {
     display: flex;
     padding: 3rem 0;
 }
-.social-icons a{
+.social-icons a {
     color: #626a6a;
     margin: 0 0.5rem;
     display: flex;
@@ -316,7 +340,7 @@ footer > .container{
     font-size: 1.25rem;
     transition: var(--mainTransition);
 }
-.social-icons a:hover{
+.social-icons a:hover {
     color: var(--mainWhite);
 }
 /*-----------end of footer------------*/

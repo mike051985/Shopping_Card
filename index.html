@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
 
@@ -15,7 +18,7 @@
     <nav class="navbar">
         <div class="navbar-center">
           <span class="nav-icon">
-            <i class="fas fa-bars"></i>
+            <a href="#"><i class="fas fa-bars"></i></a>
           </span>
           <h3>Delicious Fruits</h3>
           <div class="cart-btn">
@@ -31,13 +34,13 @@
       <header class="hero">
         <div class="banner">
           <h1 class="banner-title">Delicious Taiwanese Fruits</h1>
-          <button class="banner-btn">shop now</button>
+          <a href="#product" class="banner-btn">shop now</a>
         </div>
       </header>
       <!-- end of hero -->
   
       <!-- products -->
-      <section class="products">
+      <section class="products" id="product">
         <div class="section-title">
           <h2>our products</h2>
         </div>
@@ -91,6 +94,7 @@
           <div class="cart-footer">
             <h3>your total : $<span class="cart-total">0</span></h3>
             <button class="clear-cart banner-btn">clear cart</button>
+            <!-- <button class="checkout checkout-btn">checkout</button>-->
           </div>
         </div>
       </div>
@@ -98,7 +102,7 @@
       <!-- footer -->
       <footer class="footer">
         <div class="footer-banner">
-            <div class="container">
+            <div class="footer-info">
                 <h2>All Season Fruits</h2>
                 <p>Taiwan, known as <em>The Kingdom of Fruits</em>, has a variety of fruits. People can taste sweet and delicious fruits at all seasons. Come and enjoy the happiness, health, and good taste fruits in Taiwan.</p>
                 <h2>Let's get in touch...</h2>
