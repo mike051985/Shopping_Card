@@ -12,7 +12,6 @@ const cartForm = document.querySelector('#cart-form');
 const checkoutForm = document.querySelector('#checkout-form');
 const amountToBePaid = document.querySelector('.Amount-to-be-paid');
 
-
 // cart items
 let cart = [];
 // buttons
@@ -244,8 +243,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // switch between cart and checkout
 document.querySelector('.checkout').addEventListener('click', (e) => {
     e.preventDefault();
-    cartForm.classList.add('form-hidden');
-    checkoutForm.classList.remove('form-hidden');
+    // prevent checkout to open if cart is empty
+    if (cartContent.children.length === 0) {
+        return false;
+    }
+    else {
+        cartForm.classList.add('form-hidden');
+        checkoutForm.classList.remove('form-hidden');
+    }
+    
 });
 
 document.querySelector('.return-to-cart').addEventListener('click', (e) => {
