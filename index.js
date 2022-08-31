@@ -9,6 +9,7 @@ const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
 
+
 // cart items
 let cart = [];
 // buttons

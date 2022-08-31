@@ -99,6 +99,15 @@ body {
     color: var(--primaryColor);
 }
 
+.checkout-form {
+    text-align: left;
+}
+.checkout-form p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
 .checkout-btn {
     padding: 1rem 3.5rem;
     text-transform: uppercase;
@@ -115,6 +124,28 @@ body {
 .checkout-btn:hover {
     background: transparent;
     color: var(--primaryColor);
+}
+
+.return-btn {
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1.5rem;
+}
+.return-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+}
+
+.checkout-form-info{
+    text-align: center;
 }
 
 /* --------------- End of Hero ----------------*/ 
