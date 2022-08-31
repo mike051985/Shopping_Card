@@ -8,6 +8,9 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
+const cartForm = document.querySelector('#cart-form');
+const checkoutForm = document.querySelector('#checkout-form');
+const amountToBePaid = document.querySelector('.Amount-to-be-paid');
 
 
 // cart items
@@ -30,7 +33,6 @@ class Products {
             });
             return products;
         } catch (error) {
-            console.log(error);
         }
     }
 }
@@ -97,6 +99,8 @@ class UI {
             itemsTotal += item.amount;
         });
         cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+        cartItems.innerText = itemsTotal;
+        amountToBePaid.innerText = parseFloat(tempTotal.toFixed(2));
         cartItems.innerText = itemsTotal;
     }
     addCartItem(item){
@@ -229,4 +233,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
         ui.getBagButtons();
         ui.cartLogic();
     });
+});
+
+// switch between cart and checkout
+document.querySelector('.return-to-cart').addEventListener('click', (e) => {
+    e.preventDefault();
+    checkoutForm.classList.add('form-hidden');
+    cartForm.classList.remove('form-hidden');
+});
+
+document.querySelector('.checkout').addEventListener('click', (e) => {
+    e.preventDefault();
+    cartForm.classList.add('form-hidden');
+    checkoutForm.classList.remove('form-hidden');
 });
