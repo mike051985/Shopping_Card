@@ -235,15 +235,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 });
 
-// switch between cart and checkout
-document.querySelector('.return-to-cart').addEventListener('click', (e) => {
+// hide checkout
+document.addEventListener("DOMContentLoaded", (e) => {
     e.preventDefault();
     checkoutForm.classList.add('form-hidden');
-    cartForm.classList.remove('form-hidden');
 });
 
+// switch between cart and checkout
 document.querySelector('.checkout').addEventListener('click', (e) => {
     e.preventDefault();
     cartForm.classList.add('form-hidden');
     checkoutForm.classList.remove('form-hidden');
+});
+
+document.querySelector('.return-to-cart').addEventListener('click', (e) => {
+    e.preventDefault();
+    checkoutForm.classList.add('form-hidden');
+    cartForm.classList.remove('form-hidden');
 });
