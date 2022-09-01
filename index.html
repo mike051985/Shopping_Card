@@ -96,13 +96,14 @@
               <h3>your total : $<span class="cart-total">0</span></h3>
               <button class="clear-cart banner-btn">clear cart</button>
               <button class="checkout checkout-btn">checkout</button>
+              <p id="error"></p>
             </div>
           </div>
           <!--checkout-->
           <div class="checkout-form" id="checkout-form">
             <div class="checkout-form-info">
               <button class="return-to-cart return-btn">return to the cart</button>
-              <p>Thank you for your purchase</p>
+              <!--<p>Thank you for your purchase.</p>-->
             </div>
             <div class="container">
               <div class="py-5 text-center">
@@ -168,20 +169,6 @@
                   </div>
                   <hr class="mb-4">
                   <h4 class="mb-3">Payment</h4>
-                  <div class="d-block my-3">
-                    <div class="custom-control custom-radio">
-                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
-                        <label class="custom-control-label" for="credit">Credit card</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                        <label class="custom-control-label" for="debit">Debit card</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
-                        <label class="custom-control-label" for="paypal">PayPal</label>
-                    </div>
-                  </div>
                   <div class="row">
                     <div class="col-md-12 mb-3">
                         <label for="cc-name">Name on card</label>
