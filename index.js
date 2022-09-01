@@ -8,10 +8,23 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
-const cartForm = document.querySelector('#cart-form');
-const checkoutForm = document.querySelector('#checkout-form');
+const cartSection = document.querySelector('#cart-section');
+const checkoutSection = document.querySelector('#checkout-section');
 const amountToBePaid = document.querySelector('.Amount-to-be-paid');
 const errorElement = document.querySelector('#error');
+const invalidFeedback = document.querySelector('.invalid-feedback');
+const checkoutForm = document.getElementById('form');
+const fullName = document.getElementById('fullName');
+const phoneNumber = document.getElementById('phone');
+const email = document.getElementById('email');
+const address = document.getElementById('address');
+const country = document.getElementById('country');
+const zip = document.getElementById('zip');
+const cardName = document.getElementById('cc-name');
+const cardNumber = document.getElementById('cc-numder');
+const cardExpiration = document.getElementById('cc-expiration');
+const cardSecurityNumber = document.getElementById('cc-CVV');
+
 
 // cart items
 let cart = [];
@@ -238,7 +251,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 // hide checkout
 document.addEventListener("DOMContentLoaded", (e) => {
     e.preventDefault();
-    checkoutForm.classList.add('form-hidden');
+    checkoutSection.classList.add('form-hidden');
 });
 
 // switch between cart and checkout
@@ -252,8 +265,8 @@ document.querySelector('.checkout').addEventListener('click', (e) => {
         return false;
     }
     else {
-        cartForm.classList.add('form-hidden');
-        checkoutForm.classList.remove('form-hidden');
+        cartSection.classList.add('form-hidden');
+        checkoutSection.classList.remove('form-hidden');
         errorMessage.push('');
         errorElement.innerText = errorMessage;
     }
@@ -262,6 +275,12 @@ document.querySelector('.checkout').addEventListener('click', (e) => {
 
 document.querySelector('.return-to-cart').addEventListener('click', (e) => {
     e.preventDefault();
-    checkoutForm.classList.add('form-hidden');
-    cartForm.classList.remove('form-hidden');
+    checkoutSection.classList.add('form-hidden');
+    cartSection.classList.remove('form-hidden');
+});
+
+// checkout form validation
+checkoutForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
 });
