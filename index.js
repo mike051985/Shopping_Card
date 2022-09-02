@@ -21,8 +21,8 @@ const countryEl = document.getElementById('country');
 const zipEl = document.getElementById('zip');
 const cardNameEl = document.getElementById('cc-name');
 const cardNumberEl = document.getElementById('cc-numder');
-const cardExpirationEl = document.getElementById('cc-expiration');
-const cardSecurityEl = document.getElementById('cc-CVV');
+const cardExpEl = document.getElementById('cc-expiration');
+const cardSecEl = document.getElementById('cc-cvv');
 const purchaseMessage = document.querySelector('#purchase');
 const checkout = document.querySelector('#checkout');
 
@@ -378,6 +378,81 @@ const checkZip = () => {
     return valid;
 };
 
+const checkCardName = () => {
+    let valid = false;
+
+    const cardName = cardNameEl.value.trim();
+
+    if (!isRequired(cardName)) {
+        showError(cardNameEl, 'Card name is required');
+    }
+    else {
+        showSuccess(cardNameEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkcardExp = () => {
+    let valid = false;
+
+    const cardExp = cardExpEl.value.trim();
+
+    if (!isRequired(cardExp)) {
+        showError(cardExpEl);
+    }
+    else {
+        showSuccess(cardExpEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkCardSec = () => {
+    let valid = false;
+
+    const cardSec = cardSecEl.value.trim();
+
+    if (!isRequired(cardSec)) {
+        showError(cardSecEl);
+    }
+    else {
+        showSuccess(cardSecEl);
+        valid = true;
+    }
+    return valid;
+};
+/*
+const checkCardNumber = () => {
+    let valid = false;
+
+    const visaCard = cardNumberEl.value.trim();
+    const masterCard = cardNumberEl.value.trim();
+
+    if (!isRequired(visaCard) || !isRequired(masterCard)) {
+        showError(cardNumberEl, 'Email cannot be blank.');
+    } 
+    else if (!isVisaCardValid(visaCard) || isMasterCardValid(masterCard)) {
+        showError(cardNumberEl, 'Email is not valid.')
+    } 
+    else {
+        showSuccess(cardNumberEl);
+        valid = true;
+    }
+    return valid;
+};
+
+
+const isVisaCardValid = (visaCard) => {
+    const re = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+    return re.test(visaCard);
+};
+
+const isMasterCardValid = (masterCard) => {
+    const re = /^(?:5[1-5][0-9]{14})$/;
+    return re.test(masterCard);
+};*/
+
 const isEmailValid = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -426,7 +501,11 @@ checkoutForm.addEventListener("submit", (e) => {
         isEmailValid = checkEmail(),
         isAddressValid = checkAddress(),
         isCountryValid = checkCountry(),
-        isZipValid = checkZip();
+        isZipValid = checkZip(),
+        isCardNameValid = checkCardName(),
+        //isCardNumberValid = checkCardNumber(),
+        isCardSecValid = checkCardSec(),
+        isCardExpValid = checkcardExp();
 ;
 
     let isCheckoutFormValid = isFullNameValid && 
@@ -434,7 +513,11 @@ checkoutForm.addEventListener("submit", (e) => {
         isAddressValid &&
         isCountryValid &&
         isZipValid &&
-        isEmailValid;
+        isEmailValid &&
+        isCardNameValid &&
+        //isCardNumberValid &&
+        isCardSecValid &&
+        isCardExpValid;
 
     let messages = [];
 
