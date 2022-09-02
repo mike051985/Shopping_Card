@@ -20,7 +20,7 @@ const addressEl = document.getElementById('address');
 const countryEl = document.getElementById('country');
 const zipEl = document.getElementById('zip');
 const cardNameEl = document.getElementById('cc-name');
-const cardNumberEl = document.getElementById('cc-numder');
+const cardNumberEl = document.getElementById('cc-number');
 const cardExpEl = document.getElementById('cc-expiration');
 const cardSecEl = document.getElementById('cc-cvv');
 const purchaseMessage = document.querySelector('#purchase');
@@ -281,7 +281,7 @@ document.querySelector('.return-to-cart').addEventListener('click', (e) => {
 });
 
 // checkout form validation
-
+// Billing address
 const checkFullName = () => {
     let valid = false;
 
@@ -378,6 +378,7 @@ const checkZip = () => {
     return valid;
 };
 
+// Payment info 
 const checkCardName = () => {
     let valid = false;
 
@@ -422,18 +423,18 @@ const checkCardSec = () => {
     }
     return valid;
 };
-/*
+
 const checkCardNumber = () => {
     let valid = false;
 
-    const visaCard = cardNumberEl.value.trim();
-    const masterCard = cardNumberEl.value.trim();
+    const card = cardNumberEl.value.trim();
+    
 
-    if (!isRequired(visaCard) || !isRequired(masterCard)) {
-        showError(cardNumberEl, 'Email cannot be blank.');
-    } 
-    else if (!isVisaCardValid(visaCard) || isMasterCardValid(masterCard)) {
-        showError(cardNumberEl, 'Email is not valid.')
+    if (!isRequired(card)) {
+        showError(cardNumberEl, 'Card number cannot be blank');
+    }
+    else if (!isCardValid(card)) {
+        showError(cardNumberEl, 'Sorry, we only accept Visa or Master Card.')
     } 
     else {
         showSuccess(cardNumberEl);
@@ -443,15 +444,10 @@ const checkCardNumber = () => {
 };
 
 
-const isVisaCardValid = (visaCard) => {
-    const re = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
-    return re.test(visaCard);
+const isCardValid = (card) => {
+    const re = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/;
+    return re.test(card);
 };
-
-const isMasterCardValid = (masterCard) => {
-    const re = /^(?:5[1-5][0-9]{14})$/;
-    return re.test(masterCard);
-};*/
 
 const isEmailValid = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -462,7 +458,6 @@ const isPhoneNumberValid = (phoneNumber) => {
     const re = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
     return re.test(phoneNumber);
 };
-
 
 const isRequired = value => value === '' ? false : true;
 
@@ -503,10 +498,10 @@ checkoutForm.addEventListener("submit", (e) => {
         isCountryValid = checkCountry(),
         isZipValid = checkZip(),
         isCardNameValid = checkCardName(),
-        //isCardNumberValid = checkCardNumber(),
+        isCardNumberValid = checkCardNumber();
         isCardSecValid = checkCardSec(),
         isCardExpValid = checkcardExp();
-;
+
 
     let isCheckoutFormValid = isFullNameValid && 
         isPhoneNumberValid && 
@@ -514,8 +509,8 @@ checkoutForm.addEventListener("submit", (e) => {
         isCountryValid &&
         isZipValid &&
         isEmailValid &&
-        isCardNameValid &&
-        //isCardNumberValid &&
+        isCardNameValid && 
+        isCardNumberValid &&
         isCardSecValid &&
         isCardExpValid;
 
