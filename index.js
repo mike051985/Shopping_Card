@@ -12,18 +12,19 @@ const cartSection = document.querySelector('#cart-section');
 const checkoutSection = document.querySelector('#checkout-section');
 const amountToBePaid = document.querySelector('.Amount-to-be-paid');
 const errorElement = document.querySelector('#error');
-const invalidFeedback = document.querySelector('.invalid-feedback');
 const checkoutForm = document.getElementById('form');
-const fullName = document.getElementById('fullName');
-const phoneNumber = document.getElementById('phone');
-const email = document.getElementById('email');
-const address = document.getElementById('address');
-const country = document.getElementById('country');
-const zip = document.getElementById('zip');
-const cardName = document.getElementById('cc-name');
-const cardNumber = document.getElementById('cc-numder');
-const cardExpiration = document.getElementById('cc-expiration');
-const cardSecurityNumber = document.getElementById('cc-CVV');
+const fullNameEl = document.getElementById('fullName');
+const phoneNumberEl = document.getElementById('phone');
+const emailEl = document.getElementById('email');
+const addressEl = document.getElementById('address');
+const countryEl = document.getElementById('country');
+const zipEl = document.getElementById('zip');
+const cardNameEl = document.getElementById('cc-name');
+const cardNumberEl = document.getElementById('cc-numder');
+const cardExpirationEl = document.getElementById('cc-expiration');
+const cardSecurityEl = document.getElementById('cc-CVV');
+const purchaseMessage = document.querySelector('#purchase');
+const checkout = document.querySelector('#checkout');
 
 
 // cart items
@@ -280,7 +281,171 @@ document.querySelector('.return-to-cart').addEventListener('click', (e) => {
 });
 
 // checkout form validation
+
+const checkFullName = () => {
+    let valid = false;
+
+    const fullName = fullNameEl.value.trim();
+
+    if (!isRequired(fullName)) {
+        showError(fullNameEl, 'Full Name cannot be blank');
+    }
+    else {
+        showSuccess(fullNameEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkPhoneNumber = () => {
+    let valid = false;
+
+    const phoneNumber = phoneNumberEl.value.trim();
+
+    if (!isRequired(phoneNumber)) {
+        showError(phoneNumberEl, 'Phone number cannot be blank');
+    }
+    else if (!isPhoneNumberValid(phoneNumber)) {
+        showError(phoneNumberEl, 'Phone number is not valid.')
+    } 
+    else {
+        showSuccess(phoneNumberEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkEmail = () => {
+    let valid = false;
+
+    const email = emailEl.value.trim();
+
+    if (!isRequired(email)) {
+        showError(emailEl, 'Email cannot be blank.');
+    } 
+    else if (!isEmailValid(email)) {
+        showError(emailEl, 'Email is not valid.')
+    } 
+    else {
+        showSuccess(emailEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkAddress = () => {
+    let valid = false;
+
+    const address = addressEl.value.trim();
+
+    if (!isRequired(address)) {
+        showError(addressEl, 'Please enter your shipping address');
+    }
+    else {
+        showSuccess(addressEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkCountry = () => {
+    let valid = false;
+
+    const country = countryEl.value.trim();
+
+    if (!isRequired(country)) {
+        showError(countryEl, 'Please enter your country.');
+    }
+    else {
+        showSuccess(countryEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const checkZip = () => {
+    let valid = false;
+
+    const zip = zipEl.value.trim();
+
+    if (!isRequired(zip)) {
+        showError(zipEl);
+    }
+    else {
+        showSuccess(zipEl);
+        valid = true;
+    }
+    return valid;
+};
+
+const isEmailValid = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+};
+
+const isPhoneNumberValid = (phoneNumber) => {
+    const re = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+    return re.test(phoneNumber);
+};
+
+
+const isRequired = value => value === '' ? false : true;
+
+const showError = (input, message) => {
+    // get the form-field element
+    const formField = input.parentElement;
+    // add the error class
+    formField.classList.remove('success');
+    formField.classList.add('error');
+
+    // show the error message
+    const error = formField.querySelector('small');
+    error.textContent = message;
+};
+
+const showSuccess = (input) => {
+    // get the form-field element
+    const formField = input.parentElement;
+
+    // remove the error class
+    formField.classList.remove('error');
+    formField.classList.add('success');
+
+    // hide the error message
+    const error = formField.querySelector('small');
+    error.textContent = '';
+}
+
+
 checkoutForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    
+
+    // validate fields
+    let isFullNameValid = checkFullName(),
+        isPhoneNumberValid = checkPhoneNumber(),
+        isEmailValid = checkEmail(),
+        isAddressValid = checkAddress(),
+        isCountryValid = checkCountry(),
+        isZipValid = checkZip();
+;
+
+    let isCheckoutFormValid = isFullNameValid && 
+        isPhoneNumberValid && 
+        isAddressValid &&
+        isCountryValid &&
+        isZipValid &&
+        isEmailValid;
+
+    let messages = [];
+
+    if (isCheckoutFormValid) {
+        messages.push('Thank you for your purchase.');
+        purchaseMessage.innerText = messages;
+        checkout.classList.add('form-hidden'); 
+    }
+
+    document.addEventListener("DOMContentLoaded", (e) => {
+        e.preventDefault();
+        checkout.classList.remove('form-hidden');
+    });
 });

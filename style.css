@@ -5,6 +5,8 @@
     --mainWhite: #fff;
     --mainBlack: #222;
     --mainGrey: #ececec;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
     --mainSpacing: 0.1rem;
     --mainTransition: all 0.3s linear;
 }
@@ -152,6 +154,13 @@ body {
     display: none;
 }
 
+.form-field.success input {
+    border-color:var(--color-success);
+}
+
+.form-field.error input {
+    border-color:var(--color-error);
+}
 /* --------------- End of Hero ----------------*/ 
 
 /* --------------- Cart ----------------*/ 
