@@ -23,15 +23,15 @@ body {
 /* --------------- Navbar ---------------- */
 
 .navbar {
-    overflow: hidden;
-    background-color: rgb(231, 226, 221);
+    position: sticky;
     top: 0;
-    position: fixed;
-    width: 100%;
     height: 60px;
-    z-index: 100;
-    border-bottom: var(--primaryColor) 0.3rem solid;
-}
+    width: 100%;
+    background: rgb(231, 226, 221);
+    z-index: 1;
+    padding: 1rem;
+    }
+
 .navbar-center {
     width: 100%;
     max-width: 1170px;
@@ -40,16 +40,17 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
+        
 }
-.navbar-center h3 {
-    text-transform: uppercase;
-}
+
 .nav-icon {
     font-size: 1.5rem;
-}
-.nav-icon a {
+  }
+
+  .nav-icon a {
     color: var(--primaryColor);
-}
+  }
+
 .cart-btn {
     position: relative;
     cursor: pointer;
