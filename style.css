@@ -21,15 +21,16 @@ body {
     font-family: "Lato", sans-serif;
 }
 /* --------------- Navbar ---------------- */
+
 .navbar {
-    position: sticky;
+    overflow: hidden;
+    background-color: rgb(231, 226, 221);
     top: 0;
-    height: 60px;
+    position: fixed;
     width: 100%;
-    display: flex;
-    align-items: center;
-    background: rgb(231, 226, 221);
-    z-index: 1;
+    height: 60px;
+    z-index: 100;
+    border-bottom: var(--primaryColor) 0.3rem solid;
 }
 .navbar-center {
     width: 100%;
@@ -65,11 +66,16 @@ body {
 /* --------------- End of Navbar ---------------- */
 /* --------------- Hero ----------------*/ 
 .hero {
-    min-height: calc(100vh - 60px);
-    background: url("https://i.postimg.cc/Y9SHYLRJ/pexels-trang-doan-1132047-2.jpg") center/cover no-repeat;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2) url("https://i.postimg.cc/Y9SHYLRJ/pexels-trang-doan-1132047-2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
 }
 .banner {
     text-align: center;
