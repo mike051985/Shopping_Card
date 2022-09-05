@@ -16,22 +16,33 @@
 
     <!-- navbar -->
     <nav class="navbar">
-        <div class="navbar-center">
+      <di class="nav-center">
+        <!-- logo -->
+          <a href="#home"><img src="https://i.postimg.cc/YCzmfZN6/Logo-Makr-9ts-Ci7.png" class="logo" alt="logo" /></a>
+        <!-- links -->
+        <ul class="links">
+            <li>
+                <a href="#home"><i class="fas fa-home"></i></a>
+            </li>
+            <li>
+                <a href="#product">Shopping</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <!-- cart button -->
+        <div class="cart-btn">
           <span class="nav-icon">
-            <a href="#"><i class="fas fa-home"></i></a>
+            <i class="fas fa-cart-plus"></i>
           </span>
-          <h3>Delicious Fruits</h3>
-          <div class="cart-btn">
-            <span class="nav-icon">
-              <i class="fas fa-cart-plus"></i>
-            </span>
-            <div class="cart-items">0</div>
-          </div>
+          <div class="cart-items">0</div>
         </div>
+      </div>
     </nav>
       <!-- end of navbar -->
       <!-- hero -->
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="banner">
           <h1 class="banner-title">Delicious Taiwanese Fruits</h1>
           <a href="#product" class="banner-btn">shop now</a>
@@ -188,7 +199,7 @@
       </div>
       <!-- end of cart -->
       <!-- footer -->
-      <footer class="footer">
+      <footer class="footer" id="contact">
         <div class="footer-banner">
             <div class="footer-info">
                 <h2>All Season Fruits</h2>

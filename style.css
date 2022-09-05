@@ -20,36 +20,71 @@ body {
     background: var(--mainWhite);
     font-family: "Lato", sans-serif;
 }
-/* --------------- Navbar ---------------- */
+ul {
+    list-style-type: none;
+}
+ul a {
+    text-decoration: none;
+}
 
+/* --------------- Navbar ---------------- */
 .navbar {
-    position: sticky;
-    top: 0;
-    height: 60px;
-    width: 100%;
     background: rgb(231, 226, 221);
-    z-index: 1;
-    padding: 1rem;
     }
 
-.navbar-center {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-        
-}
+    .nav-center {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+    .logo {
+        height: 70px;
+    }
+    .links {
+        height: auto;
+        display: flex;
+    }
+    .links a {
+        color: var(--primaryColor);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        display: block;
+        padding: 0.5rem 1rem;
+        transition:var(--mainTransition);
+    }
+    .links a:hover {
+        color: var(--mainBlack);
+        padding-left: 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: -6rem;
+        }
+        .links a{
+            font-size: 0.8rem;
+        }
+        .logo {
+            height: 50px;
+        } 
+    }
 
 .nav-icon {
     font-size: 1.5rem;
-  }
+}
 
-  .nav-icon a {
+.nav-icon a {
     color: var(--primaryColor);
-  }
+}
 
 .cart-btn {
     position: relative;
@@ -82,16 +117,16 @@ body {
     text-align: center;
     background: rgba(255, 255, 255, 0.8);
     display: inline-block;
-    padding: 2rem;
+    padding: 1.8rem;
 }
 .banner-title {
-    font-size: 3.4rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .banner-btn {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
     font-size: 1rem;
@@ -106,6 +141,19 @@ body {
 .banner-btn:hover {
     background: transparent;
     color: var(--primaryColor);
+}
+
+@media (max-width: 700px){
+    .hero{
+        height: 70vh;
+    }
+    .banner{
+        padding: 1.5rem;
+    }
+    .banner-title{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 .checkout-form {
