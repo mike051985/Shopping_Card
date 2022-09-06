@@ -51,6 +51,7 @@ img {
     .links {
         height: auto;
         display: flex;
+        margin: 0 auto;
     }
     .links a {
         color: var(--primaryColor);
