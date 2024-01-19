@@ -111,13 +111,11 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /*background: rgba(0, 0, 0, 0.2) url("https://i.postimg.cc/Y9SHYLRJ/pexels-trang-doan-1132047-2.jpg");*/
-    background: rgba(0, 0, 0, 0.2) url("https://media.giphy.com/media/NQDgacJ5EfydP7gM4n/giphy.gif");
+    background: rgba(0, 0, 0, 0.2) url(https://i.postimg.cc/pXRxV4s1/pexels-lukas-616415.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     background-blend-mode: overlay;
-    background-repeat: no-repeat;
     max-width: calc(100% - 100px);
     margin: 0 auto;
 }
@@ -134,7 +132,7 @@ img {
     margin-bottom: 2rem;
 }
 .banner-btn {
-    padding: 1rem 2rem;
+    padding: 1em 2em;
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
     font-size: 1rem;
@@ -162,6 +160,10 @@ img {
     .banner-title{
         font-size: 2rem;
         margin-bottom: 1.5rem;
+    }
+
+    .banner-btn {
+        padding: 0.75em 1.2em;
     }
 }
 
@@ -442,9 +444,9 @@ img {
     padding-bottom: 1rem;
 }
 .footer-banner p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    padding-bottom: 1rem;
+    padding: 2em;
 }
 .envelope {
     font-size: 3rem;
@@ -483,7 +485,8 @@ footer > .footer-info {
 
 @media (max-width: 450px) {
     .footer-banner p {
-        padding: 1em;
+        padding: 1.5em;
+        font-size: 1.25rem;
     }
 }
 /*-----------end of footer------------*/
