@@ -111,11 +111,15 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.2) url("https://i.postimg.cc/Y9SHYLRJ/pexels-trang-doan-1132047-2.jpg");
+    /*background: rgba(0, 0, 0, 0.2) url("https://i.postimg.cc/Y9SHYLRJ/pexels-trang-doan-1132047-2.jpg");*/
+    background: rgba(0, 0, 0, 0.2) url("https://media.giphy.com/media/NQDgacJ5EfydP7gM4n/giphy.gif");
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    max-width: calc(100% - 100px);
+    margin: 0 auto;
 }
 .banner {
     text-align: center;
@@ -149,14 +153,30 @@ img {
 
 @media (max-width: 700px){
     .hero{
-        height: 70vh;
+        height: 60vh;
     }
     .banner{
         padding: 1.5rem;
+        width: 450px;
     }
     .banner-title{
         font-size: 2rem;
         margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .hero {
+        height: 40vh;
+        max-width: calc(100% - 30px);
+    }
+
+    .banner {
+        width: 300px;
+    }
+
+    .banner-title {
+        font-size: 1.5rem;
     }
 }
 
@@ -397,6 +417,12 @@ img {
     text-align: center;
 }
 
+@media (max-width: 450px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
 /* ---------------end of Products ---------------- */
 
 /*-----------footer------------*/
@@ -452,6 +478,13 @@ footer > .footer-info {
 }
 .social-icons a:hover {
     color: var(--mainWhite);
+}
+
+
+@media (max-width: 450px) {
+    .footer-banner p {
+        padding: 1em;
+    }
 }
 /*-----------end of footer------------*/
 
